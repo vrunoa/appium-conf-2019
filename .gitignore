@@ -2,6 +2,8 @@
 *.apk
 *.ap_
 
+node_modules
+package-lock.json
 # Files for the ART/Dalvik VM
 *.dex
 
