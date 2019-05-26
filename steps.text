@@ -1,0 +1,27 @@
+# Step 1
+# appium-adb /lib/tools/adb-emu-commands.js
+/**
+ * Emulate light sensor on the connected emulator.
+ *
+ * @param {float} light
+ */
+emuMethods.lightSensor = async function lightSensor (light = 0) {
+  // light sensor <light> allows you to set the ligth sensor values on the emulator.
+  await this.adbExecEmu(['sensor', 'set', 'light', light]);
+};
+
+# Step 2
+# appium-android-driver /lib/actions/commands.js
+commands.lightSensor = async function lightSensor (light) {
+  if (!this.isEmulator()) {
+    log.errorAndThrow('lightSensor method is only available for emulators');
+  }
+  await this.adb.lightSensor(light);
+};
+
+# Step 3
+# appium-base-driver /lib/protocol/routes
+'/wd/hub/session/:sessionId/appium/device/light_sensor': {
+    POST: {command: 'lightSensor', payloadParams: {required: ['light']}}
+},
+
