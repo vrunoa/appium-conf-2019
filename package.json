@@ -4,6 +4,7 @@
   "description": "Appium Conf 2019",
   "scripts": {
     "test-login": "mocha tests/test_login.js --compilers js:babel-core/register -t 0 --colors --bail",
+    "test-sms": "mocha tests/test_sms.js --compilers js:babel-core/register -t 0 --colors --bail",
     "test-light-sensor": "mocha tests/test_light_sensor.js --compilers js:babel-core/register -t 0 --colors --bail"
   },
   "author": "vrunoa",
