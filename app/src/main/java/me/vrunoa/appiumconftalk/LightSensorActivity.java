@@ -37,12 +37,12 @@ public class LightSensorActivity extends AppCompatActivity  implements SensorEve
     }
 
     private void setViewBackgroundColor(float lightValue) {
-        int textColor = R.color.text_dark;
-        int containerColor = R.color.container_light;
+        int textColorResource = R.color.text_dark;
+        int containerColorResource = R.color.container_light;
         int barColor = R.color.colorPrimary;
         if (lightValue < 5000){
-            textColor = R.color.text_light;
-            containerColor = R.color.container_dark;
+            textColorResource = R.color.text_light;
+            containerColorResource = R.color.container_dark;
             barColor = R.color.colorPrimaryDark;
 
         }
@@ -54,22 +54,22 @@ public class LightSensorActivity extends AppCompatActivity  implements SensorEve
                     )
                 )
         );
-        String textContent = String.valueOf(textColor);
-        String containerContent = String.valueOf(containerColor);
+
+        int containerColor = ContextCompat.getColor(
+                LightSensorActivity.this,
+                containerColorResource
+        );
+        String containerContent = String.format("#%06X", 0xFFFFFF & containerColor);
         mainView.setContentDescription(containerContent);
-        mainView.setBackgroundColor(
-                ContextCompat.getColor(
-                        LightSensorActivity.this,
-                        containerColor
-                )
+        mainView.setBackgroundColor(containerColor);
+
+        int textColor = ContextCompat.getColor(
+                LightSensorActivity.this,
+                textColorResource
         );
+        String textContent = String.format("#%06X", 0xFFFFFF & textColor);
         textView.setContentDescription(textContent);
-        textView.setTextColor(
-                ContextCompat.getColor(
-                        LightSensorActivity.this,
-                        textColor
-                )
-        );
+        textView.setTextColor(textColor);
     }
 
     @Override
