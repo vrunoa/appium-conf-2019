@@ -9,7 +9,8 @@ emuMethods.lightSensor = async function lightSensor (light = 0) {
   // light sensor <light> allows you to set the ligth sensor values on the emulator.
   await this.adbExecEmu(['sensor', 'set', 'light', light]);
 };
-
+# npm link
+------------------------------------
 # Step 2
 # appium-android-driver /lib/actions/commands.js
 commands.lightSensor = async function lightSensor (light) {
@@ -18,10 +19,45 @@ commands.lightSensor = async function lightSensor (light) {
   }
   await this.adb.lightSensor(light);
 };
-
+# npm link
+------------------------------------
 # Step 3
 # appium-base-driver /lib/protocol/routes
 '/wd/hub/session/:sessionId/appium/device/light_sensor': {
     POST: {command: 'lightSensor', payloadParams: {required: ['light']}}
 },
+# npm link
+------------------------------------
+# Step 4
+# link all dependencies in appium
+# npm link appium-adb
+# npm link appium-android-driver
+# npm link appium-base-driver
+# run appium
+# node .
+------------------------------------
+# Step 5
+# wd lib/commands.js
+/**
+ * lightSensor(light, cb) -> cb(err)
+ *
+ * @jsonWire POST /session/:sessionId/appium/device/light_sensor
+ */
+commands.lightSensor = function() {
+  var fargs = utils.varargs(arguments);
+  var cb = fargs.callback,
+      light = fargs.all[0];
+  var data = {light: light};
+  this._jsonWireCall({
+    method: 'POST'
+    , relPath: '/appium/device/light_sensor'
+    , data: data
+    , cb: simpleCallback(cb)
+  });
+};
+# npm link
+------------------------------------
+# Step 6
+# add the new test using lightSensor
+
 
