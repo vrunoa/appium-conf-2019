@@ -9,4 +9,9 @@
     <string name="please_complete_all_the_fields">Please complete all the fields</string>
     <string name="wrong_user_pass">Wrong user and password!</string>
     <string name="appium_conf">Welcome to AppiumConf</string>
+    <string name="validate_ur_account">Validate your account</string>
+    <string name="give_us_ur_phone">Please enter your phone number to validate your account</string>
+    <string name="confirm">Confirm</string>
+    <string name="we_sent_u">We have sent you an SMS with a code to verify your account</string>
+    <string name="validate">Validate</string>
 </resources>
