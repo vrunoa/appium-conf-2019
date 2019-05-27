@@ -2,14 +2,12 @@
   "name": "appium-conf-2019",
   "version": "0.0.1",
   "description": "Appium Conf 2019",
-  "directories": {
-    "test": "tests"
-  },
   "scripts": {
-    "test-login": "mocha tests/test_login.js --compilers js:babel-core/register -t 0 --colors --bail"
+    "test-login": "mocha tests/test_login.js --compilers js:babel-core/register -t 0 --colors --bail",
+    "test-light-sensor": "mocha tests/test_light_sensor.js --compilers js:babel-core/register -t 0 --colors --bail"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "vrunoa",
+  "license": "MIT",
   "devDependencies": {
     "babel-core": "^6.26.3",
     "babel-eslint": "^7.2.3",
