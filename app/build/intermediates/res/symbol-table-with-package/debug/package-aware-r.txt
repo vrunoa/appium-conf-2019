@@ -825,7 +825,7 @@ id useLogo
 id userEditText
 id validCodeContainer
 id validateBtt
-id webViewPhone
+id videoView
 id welcomeText
 id withText
 id wrap
@@ -882,6 +882,7 @@ layout sms_activity
 layout support_simple_spinner_dropdown_item
 mipmap ic_launcher
 mipmap ic_launcher_round
+raw appium
 string abc_action_bar_home_description
 string abc_action_bar_up_description
 string abc_action_menu_overflow_description

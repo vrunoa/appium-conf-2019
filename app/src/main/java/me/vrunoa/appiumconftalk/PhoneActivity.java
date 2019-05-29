@@ -6,6 +6,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.pm.PackageManager;
+import android.net.Uri;
 import android.os.BatteryManager;
 import android.os.Build;
 import android.os.Bundle;
@@ -14,7 +15,13 @@ import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.telephony.TelephonyManager;
 import android.util.Log;
+import android.view.View;
+import android.webkit.WebChromeClient;
+import android.webkit.WebSettings;
 import android.webkit.WebView;
+import android.webkit.WebViewClient;
+import android.widget.MediaController;
+import android.widget.VideoView;
 
 import java.util.Date;
 
@@ -22,22 +29,24 @@ public class PhoneActivity extends AppCompatActivity {
 
     private static final int REQ_SMS_PERMISSION = 3;
     private PhoneStateReceiver phoneListener;
-    private static WebView webView;
+    private static VideoView videoView;
+    private static MediaController mediaController;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.phone_not_handled_activity);
 
-        webView = findViewById(R.id.webViewPhone);
-        webView.loadUrl("file:///android_asset/game.html");
-        webView.getSettings().setJavaScriptEnabled(true);
-        /*
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-            webView.getSettings().setSafeBrowsingEnabled(false);
-        }
-        */
+        videoView = findViewById(R.id.videoView);
+        Uri uri = Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.appium);
+        mediaController = new MediaController(this);
+        mediaController.setAnchorView(videoView);
+        videoView.setMediaController(mediaController);
 
+        videoView.setVideoURI(uri);
+        videoView.requestFocus();
+        videoView.start();
         ask4permissions();
     }
 
@@ -68,6 +77,11 @@ public class PhoneActivity extends AppCompatActivity {
     }
 
     @Override
+    protected void onPostResume() {
+        super.onPostResume();
+    }
+
+    @Override
     public void onDestroy() {
         super.onDestroy();
         unregisterReceiver(phoneListener);
@@ -79,7 +93,11 @@ public class PhoneActivity extends AppCompatActivity {
         public void onReceive(Context context, Intent intent) {
             String stateStr = intent.getExtras().getString(TelephonyManager.EXTRA_STATE);
             if(stateStr.equals(TelephonyManager.EXTRA_STATE_RINGING)){
-                Log.i("vruno", "ring");
+                videoView.pause();
+                mediaController.show(15000);
+            } else if(stateStr.equalsIgnoreCase(TelephonyManager.EXTRA_STATE_IDLE) && !videoView.isPlaying()) {
+                videoView.start();
+                mediaController.show(15000);
             }
         }
 

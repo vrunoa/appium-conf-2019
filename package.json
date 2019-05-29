@@ -5,6 +5,7 @@
   "scripts": {
     "test-login": "mocha tests/test_login.js --compilers js:babel-core/register -t 0 --colors --bail",
     "test-sms": "mocha tests/test_sms.js --compilers js:babel-core/register -t 0 --colors --bail",
+    "test-phonecall": "mocha tests/test_phonecall.js --compilers js:babel-core/register -t 0 --colors --bail",
     "test-battery": "mocha tests/test_battery.js --compilers js:babel-core/register -t 0 --colors --bail",
     "test-light-sensor": "mocha tests/test_light_sensor.js --compilers js:babel-core/register -t 0 --colors --bail",
     "test-fingerprint": "mocha tests/test_fingerprint.js --compilers js:babel-core/register -t 0 --colors --bail"
