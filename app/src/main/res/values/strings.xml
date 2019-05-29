@@ -14,4 +14,15 @@
     <string name="confirm">Confirm</string>
     <string name="we_sent_u">We have sent you an SMS with a code to verify your account</string>
     <string name="validate">Validate</string>
+    <string name="battery_charger_alarm">Battery alarm!</string>
+    <string name="login">Login</string>
+    <string name="must_accept_fingerprint_permission">Please accept the permissions</string>
+    <string name="go_2_settings">Go to settings!</string>
+    <string name="checking_secure_n_permissions">Checking permissions</string>
+    <string name="user_not_authenticated">User not authenticated</string>
+    <string name="use_ur_fingerprint">Use your fingerprint to authenticate</string>
+    <string name="failed_to_auth_fingerprint">Failed to authenticate!</string>
+    <string name="you_re_authenticated">Welcome you\'re authenticated</string>
+    <string name="stop_alarm">Stop Alarm</string>
+    <string name="disconnect_ur_charger">Battery charged. Disconnect your charger.</string>
 </resources>
