@@ -30,17 +30,13 @@ describe('Android Conference PhoneCall tests', async () => {
         await driver.gsmCall('6505551212', 'call');
         await sleep(8000);
         let el = await driver.elementById('android:id/pause');
-        console.log(await el.getAttributes());
-        expect(await el.getAttribute('content-desc')).to.equal("Play");
-        // expect(await el.isDisplayed()).to.equal(true);
+        expect(await el.isDisplayed()).to.equal(true);
     });
     it('test video continues after call ended', async () => {
+        let el = await driver.elementById('android:id/pause');
         await driver.gsmCall('6505551212', 'cancel');
         await sleep(5000);
-        // console.log(await driver.source());
-        let el = await driver.elementById('android:id/pause');
-        expect(await el.isDisplayed()).to.equal(true);
-        expect(await el.getAttribute('content-desc')).to.equal("Pause");
+        expect(await el.isDisplayed()).to.equal(false);
         await sleep(3000);
     });
 });
