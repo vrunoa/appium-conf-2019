@@ -12,7 +12,7 @@ let caps = {
     'appWaitActivity': '.SMSLoginActivity',
     'deviceName': 'Android GoogleApi Emulator',
     'platformName': 'Android',
-    'platformVersion': '7.1',
+    'platformVersion': '8.0',
     'autoGrantPermissions': true,
     'noReset': true
 }
@@ -36,7 +36,7 @@ describe('Android Conference SMS tests', async () => {
         let codeContainer = await driver.elementById("validCodeContainer");
         expect(await codeContainer.isDisplayed()).to.equal(true);
         await driver.sendSms('2020', '1234');
-        await sleep(500);
+        await sleep(5000);
         el = await driver.elementById('smsCode1');
         expect(await el.text()).to.equal("1");
         el = await driver.elementById('smsCode2');

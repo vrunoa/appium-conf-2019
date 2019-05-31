@@ -12,7 +12,7 @@ let caps = {
     'appWaitActivity': '.FingerprintLoginActivity',
     'deviceName': 'Android GoogleApi Emulator',
     'platformName': 'Android',
-    'platformVersion': '7.1',
+    'platformVersion': '8.0',
     'autoGrantPermissions': true,
     'noReset': true
 }
