@@ -97,10 +97,8 @@ public class PhoneActivity extends AppCompatActivity {
                 mediaController.show(15000);
             } else if(stateStr.equalsIgnoreCase(TelephonyManager.EXTRA_STATE_IDLE) && !videoView.isPlaying()) {
                 videoView.start();
-                mediaController.show(15000);
+                mediaController.hide();
             }
         }
-
     }
-
 }
