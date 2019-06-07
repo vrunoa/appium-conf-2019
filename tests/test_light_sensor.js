@@ -12,7 +12,8 @@ let caps = {
     'appWaitActivity': '.LightSensorActivity',
     'deviceName': 'Android GoogleApi Emulator',
     'platformName': 'Android',
-    'platformVersion': '8.0'
+    'platformVersion': '8.0',
+    'autoGrantPermissions': true
 }
 
 describe('Test light sensor', async () => {
