@@ -1,0 +1,12 @@
+[submodule "appium"]
+	path = appium
+	url = git@github.com:appium/appium.git
+[submodule "appium-adb"]
+	path = appium-adb
+	url = git@github.com:appium/appium-adb.git
+[submodule "appium-android-driver"]
+	path = appium-android-driver
+	url = git@github.com:appium/appium-android-driver.git
+[submodule "appium-base-driver"]
+	path = appium-base-driver
+	url = git@github.com:appium/appium-base-driver.git
