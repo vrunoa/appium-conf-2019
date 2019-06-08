@@ -13,3 +13,6 @@
 [submodule "wd"]
 	path = wd
 	url = git@github.com:admc/wd.git
+[submodule "appium-adb-repl"]
+	path = appium-adb-repl
+	url = git@github.com:Urucas/appium-adb-repl.git
