@@ -10,3 +10,6 @@
 [submodule "appium-base-driver"]
 	path = appium-base-driver
 	url = git@github.com:appium/appium-base-driver.git
+[submodule "wd"]
+	path = wd
+	url = git@github.com:admc/wd.git
