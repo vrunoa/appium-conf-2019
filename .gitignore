@@ -2,6 +2,10 @@
 *.apk
 *.ap_
 
+.DS_Store
+node_modules
+.vscode
+
 # Files for the ART/Dalvik VM
 *.dex
 
