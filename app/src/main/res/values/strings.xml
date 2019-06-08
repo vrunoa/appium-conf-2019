@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">Appium Conference</string>
+    <string name="loren_ipsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\n\n
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="enter">Enter</string>
+    <string name="welcome">Welcome</string>
+    <string name="please_complete_all_the_fields">Please complete all the fields</string>
+    <string name="wrong_user_pass">Wrong user and password!</string>
+    <string name="appium_conf">Welcome to AppiumConf</string>
+    <string name="validate_ur_account">Validate your account</string>
+    <string name="give_us_ur_phone">Please enter your phone number to validate your account</string>
+    <string name="confirm">Confirm</string>
+    <string name="we_sent_u">We have sent you an SMS with a code to verify your account</string>
+    <string name="validate">Validate</string>
+    <string name="battery_charger_alarm">Battery alarm!</string>
+    <string name="login">Login</string>
+    <string name="must_accept_fingerprint_permission">Please accept the permissions</string>
+    <string name="go_2_settings">Go to settings!</string>
+    <string name="checking_secure_n_permissions">Checking permissions</string>
+    <string name="user_not_authenticated">User not authenticated</string>
+    <string name="use_ur_fingerprint">Use your fingerprint to authenticate</string>
+    <string name="failed_to_auth_fingerprint">Failed to authenticate!</string>
+    <string name="you_re_authenticated">Welcome you\'re authenticated</string>
+    <string name="stop_alarm">Stop Alarm</string>
+    <string name="disconnect_ur_charger">Battery charged. Disconnect your charger.</string>
+</resources>
