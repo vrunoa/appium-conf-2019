@@ -25,6 +25,10 @@ appium() {
     npm link appium-android-driver
     npm link appium-base-driver
     popd
+    pushd wd
+    npm link
+    popd
+    npm link wd
 }
 
 while :
