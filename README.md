@@ -1,6 +1,6 @@
 # AppiumConf 2019
 
-<iframe src="//slides.com/vrunoa/appium-conf-2019/embed" width="576" height="420" scrolling="no" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+<img src="./conf-screen.png" />
 
 ## Setup
 ```
