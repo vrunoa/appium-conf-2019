@@ -1,6 +1,6 @@
 # AppiumConf 2019
 
-<img src="./conf-screen.png" />
+<img src="https://github.com/vrunoa/appium-conf-2019/blob/updating-readme/conf-screen.png" width="640" />
 https://slides.com/vrunoa/appium-conf-2019#/
 
 ## Setup
