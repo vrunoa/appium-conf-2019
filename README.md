@@ -1,6 +1,7 @@
 # AppiumConf 2019
 
 <img src="./conf-screen.png" />
+https://slides.com/vrunoa/appium-conf-2019#/
 
 ## Setup
 ```
