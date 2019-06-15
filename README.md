@@ -11,7 +11,10 @@ npm install
 
 ## Examples
 ```
-npm run 
+npm run test-sms
+npm run test-phonecall
+npm run test-battery
+npm run test-fingerprint
 ```
 
 ## Quick adding light sensor support to Appium on Android Emulators
