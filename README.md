@@ -2,6 +2,7 @@
 
 <img src="https://github.com/vrunoa/appium-conf-2019/blob/updating-readme/conf-screen.png" width="640" />
 https://slides.com/vrunoa/appium-conf-2019#/
+https://www.youtube.com/watch?v=8Ph50Sm3Cdk
 
 ## Setup
 ```
